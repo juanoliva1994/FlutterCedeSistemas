@@ -4,7 +4,7 @@ import 'package:fluttergram/screens/home/home_view.dart';
 import 'package:fluttergram/screens/walkthrough/walkthrough_view.dart';
 
 class UIRouter {
-  static String initialRoute = HomeView.route;
+  static String initialRoute = WalkthroughView.route;
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     Map<String, Route<dynamic>> appRouting = <String, Route<dynamic>>{
