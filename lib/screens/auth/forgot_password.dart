@@ -57,7 +57,10 @@ class _ForgotPsUpViewState extends State<ForgotPsView> {
         ),
         actions: <Widget>[
           TextButton(
-            onPressed: navigateToLogin,
+            onPressed: () {
+              Navigator.of(context, rootNavigator: true)
+                  .pop(); // dismisses only the dialog and returns nothing
+            },
             child: const Text('Accept'),
           ),
         ],
