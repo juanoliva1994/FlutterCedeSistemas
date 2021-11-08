@@ -25,7 +25,7 @@ class _ForgotPsUpViewState extends State<ForgotPsView> {
   }
 
     Future<void> sendPassword() async {
-      if (emailError == 'invalid email'){
+      if (emailError != null){
         return;
       }
      await repository.restorePassword(email: emailController.text);
@@ -59,7 +59,8 @@ class _ForgotPsUpViewState extends State<ForgotPsView> {
           TextButton(
             onPressed: () {
               Navigator.of(context, rootNavigator: true)
-                  .pop(); // dismisses only the dialog and returns nothing
+                  .pop();    
+                  navigateToLogin();
             },
             child: const Text('Accept'),
           ),
